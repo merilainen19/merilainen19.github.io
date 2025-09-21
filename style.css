@@ -1,25 +1,25 @@
-/* Yleiset */
-body, html {
+/* Yleiset*/
+html, body {
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
     background-color: black !important;
     color: white !important;
     font-family: 'Montserrat', sans-serif !important;
     scroll-behavior: smooth;
-    position: relative;
-    padding-top: 70px;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
 }
 
 
 body {
-    padding-top: 56px; 
+    padding-top: 70px !important; /* korkeuden mukainen navbar */
 }
-
 
 .container {
     max-width: 2500px;
 }
-
-
-
 
 /* navi */
 .navbar .nav-link {
@@ -37,19 +37,18 @@ body {
     box-shadow: none !important;       
 }
 
-
+/* "Keilahalli Spin" */
 .navbar .navi-brand span {
     color: white !important;
-}        
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+}
 
-
-
-
-/* Nappi yleisesti  */
+/* Nappien tyyli  */
 .btn.btn-dark {
     background-color:#209d61 !important;
     color: #ffffff !important;           
-    border: none;
+    border: none !important;
 }
 
 .btn.btn-dark:hover {
@@ -57,12 +56,7 @@ body {
     color: #ffffff !important;
 }
 
-
-
-
-
-
-/* Taulukot */
+/*  Taulukot */
 .table {
     border: 3px solid #209d61 !important;
     border-radius: 8px;
@@ -75,61 +69,44 @@ body {
     padding: 10px;
 }
 
-
-
-
-
-
-
-/* Haitari */
+/*  Haitari  */
 .accordion-button {
-    font-size: 3.5rem;  
-    font-weight: 700;   
+    font-size: 1.5rem !important;  
+    font-weight: 700 !important;   
 }
 
 #accordionHinnasto .accordion-button {
-    font-size: 1.5rem;          
-    font-weight: 700;           
-    color: white;               
-    background-color: #209d61;  
+    color: white !important;               
+    background-color: #209d61 !important;  
     transition: background-color 0.3s; 
 }
 
 #accordionHinnasto .accordion-button:hover {
-    background-color: #18774c; 
+    background-color: #18774c !important; 
 }
 
-/* arrow nappi */
 #accordionHinnasto .accordion-button::after {
     filter: invert(1);
 }
 
 #accordionHinnasto .accordion-body {
-    background-color: #2a2a2a; 
-    color: white;                       
-    padding: 1rem 1.5rem;     
-    border-radius: 0 0 8px 8px; 
+    background-color: #2a2a2a !important; 
+    color: white !important;                       
+    padding: 1rem 1.5rem !important;     
+    border-radius: 0 0 8px 8px !important; 
 }
 
-
-
-/* ekat kortit */
-
+/*  Kortit  */
 .card {
     background-color: #2a2a2a !important; 
     color: white !important;             
 }
 
 .card .btn-dark:hover {
-    background-color: #666;             
+    background-color: #666 !important;             
 }
 
-
-
-
-
-
-/* Karusellit  */
+/*  Karusellit = */
 .carousel-indicators [data-bs-target] {
     background-color: #ffffff !important;
 }
@@ -138,44 +115,22 @@ body {
     background-color: #209d61 !important;
 }
 
-#demo {
-    width: 100%;
-    margin: auto;
+.carousel-item img,
+.carousel-item video {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 800px !important;
+    object-fit: cover !important;
+    display: block !important;
 }
-
-#demo .carousel-item video,
-#demo .carousel-item img {
-    width: 100%;
-    max-height: 800px;
-    object-fit: cover;
-    display: block;
-}
-
-
-
-/* Alaosa*/
-html, body {
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-body {
-    display: flex !important;
-    flex-direction: column !important;
-    min-height: 100vh !important;
-}
-
-#aukioloajat {
-    margin-top: auto !important;  
-}
-
-
-
-
 
 @media (max-width: 600px) {
     .carousel-caption {
-        display: none;
+        display: none !important;
     }
+}
+
+/* alaosa */
+#aukioloajat {
+    margin-top: auto !important;  
 }
