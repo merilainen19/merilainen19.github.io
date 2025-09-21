@@ -37,12 +37,10 @@ body {
     box-shadow: none !important;       
 }
 
-.navbar-logo {
-    height: 20px !important;   /* korkeus */
-    width: auto !important;    /* säilyttää kuvasuhteen */
-}
 
-
+.navbar .navi-brand span {
+    color: white !important;
+}        
 
 
 
